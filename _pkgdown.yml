@@ -1,0 +1,3 @@
+url: https://rmi-pacta.github.io/pacta.data.preparation
+template:
+  package: pacta.pkgdown.rmitemplate

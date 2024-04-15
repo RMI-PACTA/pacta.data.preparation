@@ -1,0 +1,10 @@
+^pacta\.data\.preparation\.Rproj$
+^\.Rproj\.user$
+^data-raw$
+^LICENSE\.md$
+^\.DS_Store$
+^\.github$
+^README\.Rmd$
+^doc$
+^Meta$
+^_pkgdown\.yml$
