@@ -7,6 +7,7 @@ test_that("returns a data frame with expected columns and no `NA`s", {
   output <- prepare_factset_entity_id__credit_parent_id(input)
 
   expect_s3_class(output, class = "data.frame")
+  expect_identical(names(output), c("factset_entity_id", "credit_parent_id"))
   expect_true(all(!is.na(output$factset_entity_id)))
   expect_true(all(!is.na(output$credit_parent_id)))
 })
