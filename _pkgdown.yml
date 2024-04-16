@@ -1,3 +1,4 @@
 url: https://rmi-pacta.github.io/pacta.data.preparation
 template:
+  bootstrap: 5
   package: pacta.pkgdown.rmitemplate
