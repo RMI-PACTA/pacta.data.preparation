@@ -44,7 +44,7 @@ prepare_abcd_flags_bonds <-
     )
 
     financial_data %>%
-      dplyr::filter(!is.na(factset_entity_id)) %>%
+      dplyr::filter(!is.na(.data$factset_entity_id)) %>%
       dplyr::left_join(factset_entity_id__ar_company_id, by = "factset_entity_id") %>%
       dplyr::left_join(factset_entity_id__security_mapped_sector, by = "factset_entity_id") %>%
       dplyr::left_join(ar_company_id__sectors_with_assets__debt, by = "ar_company_id") %>%
