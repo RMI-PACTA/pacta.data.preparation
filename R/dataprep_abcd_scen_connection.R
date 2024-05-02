@@ -53,21 +53,25 @@ dataprep_abcd_scen_connection <- function(abcd_data,
     index_regions
   )
 
-  abcd_scenario_global_aggregate <- dataprep_connect_abcd_with_scenario(
-    abcd_data,
-    scenario_data,
-    global_aggregate = TRUE,
-    reference_year = reference_year,
-    relevant_years = relevant_years,
-    tech_exclude = tech_exclude,
-    scenario_geographies_list = scenario_geographies_list,
-    sector_list = sector_list,
-    other_sector_list = other_sector_list,
-    global_aggregate_scenario_sources_list = global_aggregate_scenario_sources_list,
-    global_aggregate_sector_list = global_aggregate_sector_list,
-    scenario_regions,
-    index_regions
-  )
+  if (any(unique(scenario_data$scenario_source) %in% global_aggregate_scenario_sources_list)) {
+    abcd_scenario_global_aggregate <- dataprep_connect_abcd_with_scenario(
+      abcd_data,
+      scenario_data,
+      global_aggregate = TRUE,
+      reference_year = reference_year,
+      relevant_years = relevant_years,
+      tech_exclude = tech_exclude,
+      scenario_geographies_list = scenario_geographies_list,
+      sector_list = sector_list,
+      other_sector_list = other_sector_list,
+      global_aggregate_scenario_sources_list = global_aggregate_scenario_sources_list,
+      global_aggregate_sector_list = global_aggregate_sector_list,
+      scenario_regions,
+      index_regions
+    )
+  } else {
+    abcd_scenario_global_aggregate <- data.frame()
+  }
 
 
   # Combine Global aggregate dataset with regional dataset:
