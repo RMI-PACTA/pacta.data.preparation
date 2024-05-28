@@ -38,7 +38,7 @@ prepare_iss_average_sector_emission_intensities <- function(iss_company_emission
     factset_entity_financing_data %>%
     dplyr::left_join(factset_entity_info, by = "factset_entity_id") %>%
     dplyr::filter(
-      countrycode::countrycode(.data[["iso_country"]], "iso2c", "iso4217c") == .data[["currency"]]
+      countrycode::countrycode(.data[["iso_country"]], "iso2c", "iso4217c", warn = FALSE) == .data[["currency"]]
     ) %>%
     dplyr::left_join(currencies, by = "currency") %>%
     dplyr::mutate(
