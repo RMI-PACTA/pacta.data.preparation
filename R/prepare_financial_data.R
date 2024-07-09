@@ -10,6 +10,8 @@
 #' @return A tibble properly prepared to be saved as the `financial_data.rds`
 #'   output file
 #'
+#' @importFrom dplyr case_when
+#'
 #' @export
 
 prepare_financial_data <-
