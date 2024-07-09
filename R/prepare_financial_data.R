@@ -29,11 +29,13 @@ prepare_financial_data <-
         .by = "factset_entity_id"
       ) %>%
       filter(
-        .data$asset_type %in% c("Bonds", "Others") |
-          (.data$asset_type == "Funds" & !is.na(.data$adj_price)) |
-          (.data$asset_type == "Equity" & !is.na(.data$adj_price) & .data$adj_shares_outstanding != 0) |
-          (.data$asset_type == "Equity" & .data$adj_price != 0 & .data$adj_shares_outstanding != 0)
-      ) %>% # remove Equity and Fund rows that don't have crucial price data
+        case_when(
+          asset_type == "Bonds" ~ TRUE,
+          asset_type == "Others" ~ TRUE,
+          asset_type == "Funds" ~ !is.na(.data$adj_price),
+          asset_type == "Equity" ~ .data$adj_price > 0 & .data$adj_shares_outstanding > 0
+        )
+      ) %>%
       select(
         isin = "isin",
         unit_share_price = "adj_price",
