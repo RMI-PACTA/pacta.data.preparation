@@ -31,11 +31,12 @@ prepare_financial_data <-
         .by = "factset_entity_id"
       ) %>%
       filter(
+        # these filters are meant to drop financial data points that are functionally unusable for PACTA's ownership weight and fund expansion methodology
         case_when(
           asset_type == "Bonds" ~ TRUE,
           asset_type == "Others" ~ TRUE,
           asset_type == "Funds" ~ !is.na(.data$adj_price),
-          asset_type == "Equity" ~ .data$adj_price > 0 & .data$adj_shares_outstanding > 0
+          asset_type == "Equity" ~ .data$adj_price > 0 & .data$shares_all_classes > 0
         )
       ) %>%
       select(
