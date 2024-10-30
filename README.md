@@ -8,7 +8,7 @@
 [![CRAN
 status](https://www.r-pkg.org/badges/version/pacta.data.preparation)](https://CRAN.R-project.org/package=pacta.data.preparation)
 [![pacta.data.preparation status
-badge](https://rmi-pacta.r-universe.dev/badges/pacta.data.preparation)](https://rmi-pacta.r-universe.dev/ui#package:pacta.data.preparation)
+badge](https://rmi-pacta.r-universe.dev/badges/pacta.data.preparation)](https://rmi-pacta.r-universe.dev/pacta.data.preparation)
 <!-- badges: end -->
 
 The `pacta.data.preparation` R package provides utilities and functions used to process various data files into data required to run the PACTA for investors tools, such as [RMI-PACTA/workflow.transition.monitor](https://github.com/RMI-PACTA/workflow.transition.monitor) or [RMI-PACTA/workflow.pacta](https://github.com/RMI-PACTA/workflow.pacta).
