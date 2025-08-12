@@ -3,7 +3,7 @@ pkgdown: 2.1.3
 pkgdown_sha: ~
 articles:
   share_ownership_methodology: share_ownership_methodology.html
-last_built: 2025-08-12T11:31Z
+last_built: 2025-08-12T12:56Z
 urls:
   reference: https://rmi-pacta.github.io/pacta.data.preparation/reference
   article: https://rmi-pacta.github.io/pacta.data.preparation/articles
