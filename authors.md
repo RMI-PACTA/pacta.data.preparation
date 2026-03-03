@@ -22,14 +22,14 @@
 Source:
 [`DESCRIPTION`](https://github.com/RMI-PACTA/pacta.data.preparation/blob/main/DESCRIPTION)
 
-Yetman C, Hoffart J, Kastl J, Axthelm A (2025). *pacta.data.preparation:
+Yetman C, Hoffart J, Kastl J, Axthelm A (2026). *pacta.data.preparation:
 Prepare Data for PACTA for Investors*. R package version 0.1.0.9003,
 <https://github.com/RMI-PACTA/pacta.data.preparation>.
 
     @Manual{,
       title = {pacta.data.preparation: Prepare Data for PACTA for Investors},
       author = {CJ Yetman and Jackson Hoffart and Jacob Kastl and Alex Axthelm},
-      year = {2025},
+      year = {2026},
       note = {R package version 0.1.0.9003},
       url = {https://github.com/RMI-PACTA/pacta.data.preparation},
     }
